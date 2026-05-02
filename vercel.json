@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "backend/server.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 10
-      }
+      "use": "@vercel/node"
     },
     {
       "src": "frontend/package.json",
@@ -25,10 +22,5 @@
       "src": "/(.*)",
       "dest": "/frontend/$1"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "installCommand": "npm run install:all",
-  "buildCommand": "npm run build"
+  ]
 }
